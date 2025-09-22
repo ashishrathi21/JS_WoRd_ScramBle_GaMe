@@ -10,13 +10,8 @@ const wordBank = [
   "kiwi",
   "papaya",
   "blueberry",
-  "raspberry",
   "cherry",
-  "peach",
-  "pear",
-  "plum",
   "pomegranate",
-  "apricot",
   "coconut",
   "fig"
 ];
