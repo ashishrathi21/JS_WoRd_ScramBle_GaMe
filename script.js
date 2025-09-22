@@ -81,3 +81,9 @@ refreshbtn.addEventListener("click", () => {
   time.textContent = "30 sec";
   startTimer();
 });
+
+guessInput.addEventListener("keyup" , function(dets){
+  if(dets.key == 'Enter'){
+    checkbtn.click()
+  }
+})
