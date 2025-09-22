@@ -1,0 +1,114 @@
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #8F87F1, #B2A5FF);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+}
+
+/* ===== Container ===== */
+.container {
+  background-color: #ffffff;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 30px 50px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Headings ===== */
+.container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #282828;
+  letter-spacing: 1px;
+}
+.h2{
+    border-bottom: 2px solid gray;
+}
+
+h3{
+    margin-top: 20px;
+}
+.container h1 {
+  font-size: 2rem;
+  margin: 20px 5px;
+  color: #343333;
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* ===== Info Texts ===== */
+.container p {
+  font-size: 0.95rem;
+  margin: 8px 0;
+  color: #7e7e7e;
+  text-align: left;
+}
+
+/* ===== Input ===== */
+.container input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 7px;
+  border:  2px solid rgb(141, 141, 141);
+  outline: none;
+  margin: 15px 0;
+  font-size: 1rem;
+  text-align: center;
+  color: #565656;
+}
+
+/* ===== Buttons ===== */
+.btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.btns button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 12px;
+  border: none;
+  border-radius: 7px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Refresh Button */
+.refresh {
+  background: #828282;
+  color: #fff;
+}
+.refresh:hover {
+  background: rgb(93, 93, 93);
+}
+
+/* Check Button */
+.check {
+  background: #8F87F1;
+  color: #fff;
+}
+.check:hover {
+  background: #7a6ff4;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 10px;
+}
