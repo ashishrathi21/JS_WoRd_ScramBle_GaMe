@@ -51,7 +51,7 @@ function startTimer() {
 startTimer();
 
 checkbtn.addEventListener("click", () => {
-  if (guessInput.value.toLowerCase() === randomWord) {
+  if (guessInput.value.trim().toLowerCase() === randomWord) {
     h3.style.color = "green";
     h3.textContent = "Correct Word";
 
