@@ -11,8 +11,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   color: #fff;
+  padding: 10px; /* for small devices */
 }
 
 /* ===== Container ===== */
@@ -20,8 +21,9 @@ body {
   background-color: #ffffff;
   backdrop-filter: blur(10px);
   border-radius: 10px;
-  padding: 30px 50px;
-  width: 400px;
+  padding: 25px 35px;
+  width: 100%;
+  max-width: 450px; /* constrain on larger screens */
   text-align: center;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
@@ -32,29 +34,32 @@ body {
   margin-bottom: 15px;
   color: #282828;
   letter-spacing: 1px;
-}
-.h2{
-    border-bottom: 2px solid gray;
+  border-bottom: 2px solid gray;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
-h3{
-    margin-top: 20px;
+h3 {
+  margin-top: 20px;
+  font-size: 1rem;
 }
+
 .container h1 {
   font-size: 2rem;
-  margin: 20px 5px;
+  margin: 20px 5px 25px 5px;
   color: #343333;
   letter-spacing: 4px;
   font-weight: 700;
-  margin-bottom: 25px;
+  word-break: break-word; /* wrap long words */
 }
 
 /* ===== Info Texts ===== */
 .container p {
+  text-align: center;
   font-size: 0.95rem;
   margin: 8px 0;
   color: #7e7e7e;
-  text-align: left;
+
 }
 
 /* ===== Input ===== */
@@ -62,7 +67,7 @@ h3{
   width: 100%;
   padding: 12px;
   border-radius: 7px;
-  border:  2px solid rgb(141, 141, 141);
+  border: 2px solid rgb(141, 141, 141);
   outline: none;
   margin: 15px 0;
   font-size: 1rem;
@@ -75,11 +80,12 @@ h3{
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
+  flex-wrap: wrap; /* wrap buttons on small screens */
 }
 
 .btns button {
   flex: 1;
-  margin: 0 5px;
+  margin: 5px 5px 0 5px; /* spacing for wrapped buttons */
   padding: 12px;
   border: none;
   border-radius: 7px;
@@ -87,6 +93,7 @@ h3{
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
+  min-width: 120px; /* prevent buttons from being too narrow */
 }
 
 /* Refresh Button */
@@ -107,8 +114,63 @@ h3{
   background: #7a6ff4;
 }
 
-.footer{
-    position: fixed;
-    bottom: 0;
-    margin-bottom: 10px;
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background: rgba(0,0,0,0.1);
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* ===== Responsive Media Queries ===== */
+@media (max-width: 480px) {
+  body{
+    padding: 20px;
+  }
+  .container {
+    padding: 20px;
+  }
+
+  .container h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+.container p{
+    text-align: center;
+  } 
+  .btns button {
+    font-size: 0.9rem;
+    padding: 10px;
+    min-width: 100px;
+  }
+
+  .container h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 15px;
+  }
+
+  .container h1 {
+    font-size: 1.3rem;
+  }
+  .container p{
+    text-align: center;
+  } 
+
+  .btns {
+    flex-direction: column;
+  }
+
+  .btns button {
+    width: 100%;
+    margin: 5px 0;
+  }
 }
