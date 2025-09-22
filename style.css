@@ -153,24 +153,3 @@ h3 {
   }
 }
 
-@media (max-width: 360px) {
-  .container {
-    padding: 15px;
-  }
-
-  .container h1 {
-    font-size: 1.3rem;
-  }
-  .container p{
-    text-align: center;
-  } 
-
-  .btns {
-    flex-direction: column;
-  }
-
-  .btns button {
-    width: 100%;
-    margin: 5px 0;
-  }
-}
